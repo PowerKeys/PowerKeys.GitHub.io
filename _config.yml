@@ -1,0 +1,6 @@
+title: Power Keys
+description: 解放电脑使用效率
+lang: zh-CN
+plugins:
+  - jekyll-redirect-from
+  - jemoji

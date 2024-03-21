@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='{{ site.lang | default: "en-US" }}'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {%- seo -%}
+    <link rel="stylesheet" href='{{"/assets/css/style.css" | relative_url}}' />
+    <link
+      rel="icon"
+      type="image/png"
+      href='{{"/favicon.png" | relative_url}}'
+    />
+    <link rel="apple-touch-icon" href='{{"/favicon.png" | relative_url}}' />
+  </head>
+
+  <header>
+    <div class="container-md px-3 my-5 markdown-body">
+      {% if page.url != '/' %}
+      <p>
+        <strong
+          ><a href='{{ "/" | relative_url}}'
+            >&lt; {{ site.title | site.github.repository_name | escape }}</a
+          ></strong
+        >
+      </p>
+      {% endif %}
+    </div>
+  </header>
+
+  <body>
+    <div class="container-md px-3 my-5 markdown-body">{{ content }}</div>
+  </body>
+
+  <footer>
+    <div class="container-md px-3 my-5 markdown-body">
+      {% if page.url != '/' %}
+      <p><br /></p>
+      <p>
+        <strong
+          ><a href='{{ "/" | relative_url}}'
+            >&lt; {{ site.title | site.github.repository_name | escape }}</a
+          ></strong
+        >
+      </p>
+      {% endif %}
+      <p><br /></p>
+    </div>
+  </footer>
+</html>
